@@ -1,4 +1,6 @@
-# grocery-app
+# Grocery-app
+
+Grocery frontend app made with Vuejs (Nuxt, Antd). 
 
 ## Build Setup
 
