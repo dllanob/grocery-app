@@ -1,0 +1,21 @@
+.ant-btn {
+  height: auto;
+  line-height: 0;
+  font-size: .9em;
+  padding: 20px 30px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  &.ant-btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    &:hover {
+      background-color: darken($color: $primary-color, $amount: 15);
+      border-color: darken($color: $primary-color, $amount: 15);
+    }
+    &:focus,
+    &:active {
+      background-color: darken($color: $primary-color, $amount: 15);
+      border-color: darken($color: $primary-color, $amount: 15);
+    }
+  }
+}

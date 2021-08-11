@@ -2,7 +2,10 @@
 
 @import 'init/reset';
 @import 'init/variables';
+@import 'components/header';
+@import 'components/buttons';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $default-font;
+  font-size: $default-size;
 }

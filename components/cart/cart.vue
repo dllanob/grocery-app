@@ -1,6 +1,6 @@
 <template>
   <div class="cart">
-    <a-button class="cart_button" type="primary" @click="openCart">
+    <a-button class="cart_button" type="link" @click="openCart">
       <a-badge :count="items.length">
         <a href="#" class="head-example" />
       </a-badge>
@@ -17,12 +17,7 @@
       @close="onClose"
     >
       <cart-list />
-      <hr>
-      <a-button v-if="items.length > 0" class="cart_delete" type="link" @click="clearCartItems">
-        Clear cart
-        <a-icon type="delete" />
-      </a-button>
-      Total: {{ total }}
+      <cart-footer />
     </a-drawer>
   </div>
 </template>
@@ -64,7 +59,24 @@ export default {
 </script>
 
 <style lang="scss">
-.cart {
+@import "~assets/styles/init/variables";
 
+.cart_drawer {
+  .ant-drawer-header {
+    padding: 22px 24px;
+    text-align: center;
+    .ant-drawer-title {
+      color: black;
+      font-size: 1.4em;
+    }
+  }
+  .ant-drawer-content-wrapper {
+    @media only screen and (max-width: $screen-xs) {
+      width: 100% !important; // Important to override library styles
+    }
+  }
+  .cart-footer {
+    padding: 20px;
+  }
 }
 </style>
